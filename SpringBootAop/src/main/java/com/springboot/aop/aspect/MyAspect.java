@@ -1,5 +1,7 @@
 package com.springboot.aop.aspect;
 
+import com.springboot.aop.service.ParamValidator;
+import com.springboot.aop.service.ParamValidatorIml;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 
@@ -8,6 +10,9 @@ import java.time.LocalDateTime;
 
 @Aspect
 public class MyAspect {
+    @DeclareParents(value = "com.springboot.aop.service.HelloServiceImpl",defaultImpl = ParamValidatorIml.class)
+    public ParamValidator paramValidator;
+
     @Pointcut("execution(* com.springboot.aop.service.HelloServiceImpl.sayHello(..))")
     public void pointCut(){
 
