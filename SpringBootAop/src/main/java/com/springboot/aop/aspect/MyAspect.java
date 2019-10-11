@@ -2,6 +2,7 @@ package com.springboot.aop.aspect;
 
 import com.springboot.aop.service.ParamValidator;
 import com.springboot.aop.service.ParamValidatorIml;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 
@@ -10,15 +11,17 @@ import java.time.LocalDateTime;
 
 @Aspect
 public class MyAspect {
-    @DeclareParents(value = "com.springboot.aop.service.HelloServiceImpl",defaultImpl = ParamValidatorIml.class)
+    @DeclareParents(value = "com.springboot.aop.service.HelloService2",defaultImpl = ParamValidatorIml.class)
     public ParamValidator paramValidator;
 
     @Pointcut("execution(* com.springboot.aop.service.HelloServiceImpl.sayHello(..))")
     public void pointCut(){
 
     }
-    @Before("pointCut()")
-    public void before(){
+    @Before("pointCut() && args(name)")
+    public void before(JoinPoint joinPoint,String name){
+        System.out.println("获取的参数是:"+joinPoint.getArgs()[0].toString());
+        System.out.println("传入的名字是"+name);
         System.out.println("before"+"-------"+ LocalDateTime.now().toString());
     }
     @Around("pointCut()")
