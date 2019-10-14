@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 @Controller
 public class JpaController {
     @Autowired
@@ -16,7 +18,9 @@ public class JpaController {
     @ResponseBody
     public String index(Long id){
         User one = userRepository.findById(id).get();
-
+        List<User> users = userRepository.findUsers("zm", "");
+        String userNameLike = "%"+"hz"+"%";
+        List<User> users2 = userRepository.findByUserNameLikeOrNoteLike("%hz%", "");
         return "index";
     }
 }
