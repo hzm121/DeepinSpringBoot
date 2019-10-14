@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="DeepinSpringBoot" />
         <module name="SpringBootAop" />
+        <module name="jpaDemo" />
         <module name="databaseDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="databaseDemo" target="1.8" />
       <module name="DeepinSpringBoot" target="1.5" />
+      <module name="jpaDemo" target="1.8" />
       <module name="SpringBootAop" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -21,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SpringBootAop" options="-parameters" />
       <module name="databaseDemo" options="-parameters" />
+      <module name="jpaDemo" options="-parameters" />
     </option>
   </component>
 </project>

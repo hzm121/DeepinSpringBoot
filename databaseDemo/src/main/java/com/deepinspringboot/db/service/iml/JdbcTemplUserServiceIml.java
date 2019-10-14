@@ -7,16 +7,16 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.StatementCallback;
+import org.springframework.stereotype.Service;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
-
-public class JdbcTemplUserService implements com.deepinspringboot.db.service.JdbcTemplUserService, StatementCallback {
+@Service
+public class JdbcTemplUserServiceIml implements com.deepinspringboot.db.service.JdbcTemplUserService, StatementCallback {
     @Autowired
     private JdbcTemplate jdbcTemplate = null;
-    @Autowired
     private Statement statement = null;
     //获取映射关系
     public RowMapper<User> getUserMapper(){

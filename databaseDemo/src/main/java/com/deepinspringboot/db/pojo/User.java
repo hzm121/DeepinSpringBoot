@@ -8,6 +8,11 @@ public class User {
     private SexEnum sex = null;
     private String note = null;
 
+    @Override
+    public String toString() {
+        return id+"--"+userName+"---"+sex+"----"+note;
+    }
+
     public Long getId() {
         return id;
     }
