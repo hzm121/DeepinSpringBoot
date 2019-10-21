@@ -6,23 +6,32 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="DeepinSpringBoot" />
         <module name="SpringBootAop" />
+        <module name="demo" />
+        <module name="DeepinSpringBoot" />
         <module name="jpaDemo" />
         <module name="databaseDemo" />
+        <module name="RunToBuyGoods" />
+        <module name="MyBatisDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="databaseDemo" target="1.8" />
       <module name="DeepinSpringBoot" target="1.5" />
+      <module name="demo" target="1.8" />
       <module name="jpaDemo" target="1.8" />
+      <module name="MyBatisDemo" target="1.8" />
+      <module name="RunToBuyGoods" target="1.8" />
       <module name="SpringBootAop" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="MyBatisDemo" options="-parameters" />
+      <module name="RunToBuyGoods" options="-parameters" />
       <module name="SpringBootAop" options="-parameters" />
       <module name="databaseDemo" options="-parameters" />
+      <module name="demo" options="-parameters" />
       <module name="jpaDemo" options="-parameters" />
     </option>
   </component>
