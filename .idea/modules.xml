@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DeepinSpringBoot.iml" filepath="$PROJECT_DIR$/DeepinSpringBoot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myBatisDemo/MyBatisDemo.iml" filepath="$PROJECT_DIR$/myBatisDemo/MyBatisDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RunToBuyGoods/RunToBuyGoods.iml" filepath="$PROJECT_DIR$/RunToBuyGoods/RunToBuyGoods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBootAop/SpringBootAop.iml" filepath="$PROJECT_DIR$/SpringBootAop/SpringBootAop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/databaseDemo/databaseDemo.iml" filepath="$PROJECT_DIR$/databaseDemo/databaseDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myBatisDemo/demo.iml" filepath="$PROJECT_DIR$/myBatisDemo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpaDemo/jpaDemo.iml" filepath="$PROJECT_DIR$/jpaDemo/jpaDemo.iml" />
+    </modules>
+  </component>
+</project>
