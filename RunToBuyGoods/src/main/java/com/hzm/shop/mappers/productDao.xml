@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hzm.shop.dao.ProductDao" >
+<!--    获取产品-->
+    <select id="getProduct" resultType="product" parameterType="long">
+        select id,product_name as productName,stock,price,version,note from T_Product where id=#{id}
+    </select>
+<!--    减库存-->
+    <update id="decreaseProduct">
+        update T_product set stock = stock - #{quantity} where id=#{id}
+    </update>
+</mapper>
