@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/RunToBuyGoods" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -8,7 +11,6 @@
         <option value="$PROJECT_DIR$/databaseDemo/pom.xml" />
         <option value="$PROJECT_DIR$/jpaDemo/pom.xml" />
         <option value="$PROJECT_DIR$/MyBatisDemo/pom.xml" />
-        <option value="$PROJECT_DIR$/myBatisDemo/pom.xml" />
         <option value="$PROJECT_DIR$/RunToBuyGoods/pom.xml" />
       </list>
     </option>

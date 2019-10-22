@@ -16,22 +16,17 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.annotation.PostConstruct;
 
 
-@RestController
+@Controller
 public class PurchaseController   {
     @Autowired
     private PurchaseService purchaseService = null;
 @Autowired
 private PurchaseRecordDao purchaseRecordDao = null;
     //定义JSP视图
-    @GetMapping("/test")
-    public ModelAndView testPage(){
-        return new ModelAndView("test");
+    @RequestMapping("/test")
+    public String testPage(){
+        return "test";
     }
-    @PostConstruct()
-    public void testPage12(){
-
-    }
-
     @PostMapping("/purchase")
     public Result purchase(Long userId, Long productId, Integer quantity) {
         boolean isSuccess = purchaseService.purchase(userId, productId, quantity);
