@@ -2,13 +2,17 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hzm.shop.dao.ProductDao" >
-<!--    获取产品-->
+<mapper namespace="com.hzm.shop.dao.ProductDao">
+    <!--    获取产品-->
+    <!--    悲观锁：加了for update，给数据库那条记录加锁，会导致效率低-->
+    <!--    select id,product_name as productName,stock,price,version,note from T_Product where id=#{id} for update-->
     <select id="getProduct" resultType="product" parameterType="long">
-        select id,product_name as productName,stock,price,version,note from T_Product where id=#{id}
+select id,product_name as productName,stock,price,version,note from T_Product where id=#{id}
+
     </select>
-<!--    减库存-->
+    <!--    减库存-->
+    <!--    乐观锁：加了版本号来做新旧值得比较，如果值不一致，则不更新-->
     <update id="decreaseProduct">
-        update T_product set stock = stock - #{quantity} where id=#{id}
+        update T_product set stock = stock - #{quantity},version =version+1 where id=#{id} and version = #{version}
     </update>
 </mapper>

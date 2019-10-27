@@ -1,5 +1,7 @@
 package com.hzm.shop.pojo;
-
+/**
+ * @author huangzhenmin
+ */
 public class Result {
         private boolean isSuccess = false;
         private String msg = null;

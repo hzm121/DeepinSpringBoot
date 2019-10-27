@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/RunToBuyGoods/RunToBuyGoods.iml" filepath="$PROJECT_DIR$/RunToBuyGoods/RunToBuyGoods.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBootAop/SpringBootAop.iml" filepath="$PROJECT_DIR$/SpringBootAop/SpringBootAop.iml" />
       <module fileurl="file://$PROJECT_DIR$/databaseDemo/databaseDemo.iml" filepath="$PROJECT_DIR$/databaseDemo/databaseDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myBatisDemo/demo.iml" filepath="$PROJECT_DIR$/myBatisDemo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/jpaDemo/jpaDemo.iml" filepath="$PROJECT_DIR$/jpaDemo/jpaDemo.iml" />
     </modules>
   </component>

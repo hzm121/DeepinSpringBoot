@@ -1,8 +1,11 @@
 package com.hzm.shop.pojo;
 
 import org.apache.ibatis.type.Alias;
-
 import java.io.Serializable;
+
+/**
+ * @author hzm
+ */
 @Alias("product")
 public class ProductPo implements Serializable {
     private Long id;

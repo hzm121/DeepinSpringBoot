@@ -1,7 +1,9 @@
 package com.hzm.shop.service;
 
 import org.springframework.stereotype.Service;
-
+/**
+ * @author hzm
+ */
 
 public interface PurchaseService {
     /**

@@ -15,14 +15,17 @@
 <h1>抢购产品测试</h1>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="javascript">
-    var params = {
-        userId :1,
-        productId:1,
-        quantity:3
-    };
-    $.post("./purchase",params,function (result) {
-        alert(result.message);
-    });
+<script type="text/javascript">
+<%--    模拟高并发--%>
+    for (var i=1;i<=50000;i++){
+        var params = {
+            userId :1,
+            productId:1,
+            quantity:1
+        };
+        $.post("./purchase",params,function (result) {
+            // alert(result.msg);
+        });
+    }
 </script>
 </html>

@@ -4,6 +4,10 @@ import org.apache.ibatis.type.Alias;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+
+/**
+ * @author hzm
+ */
 @Alias("purchaseRecord")
 public class PurchaseRecordPo implements Serializable {
     private Long id;

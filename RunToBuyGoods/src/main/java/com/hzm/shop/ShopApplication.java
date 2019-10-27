@@ -15,7 +15,10 @@ import org.springframework.stereotype.Repository;
         , annotationClass = Repository.class
 )
 
-
+/**
+ *
+ * @author huangzhenmin
+ */
 public class ShopApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
